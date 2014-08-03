@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Pipeline-for-ml : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pipeline-for-ml</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sidgan/Pipeline-for-ML">View on GitHub</a>
+
+          <h1 id="project_title">Pipeline-for-ml</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sidgan/Pipeline-for-ML/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sidgan/Pipeline-for-ML/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="command-line-application" class="anchor" href="#command-line-application"><span class="octicon octicon-link"></span></a>Command Line Application</h1>
+
+<p>While working on machine learning problems, I found myself devoting greater time than expected to data cleaning, and more time on experimental tuning of the parameters. In order to make an automated pipeline the only thing that could be done automatically, was to take the output from one machine learning stage and provide it as input to another. Data Cleaning cannot be performed automatically and efficiently as of now because this requires user intervention. However, in this module the user can manually enter the labels of those columns which are categorical and thus, these can be converted into numerical values. The remaining text data from which no structure can be inferred e.g. 'Name' cannot be used, unless it is parsed first, and then the salutations extracted. A way around this is to use dummy variables, given by the function get_dummies(). Other methods include using One Hot Encoding. </p>
+
+<p>In order to build a simple command line application initially, I used the optparse package with Python. I had to take in the options using the command line and process each of them to see what kind of a problem the user had specified. The user would input ‘clu’ for 'clustering', ‘c’ for 'classification', ‘d’ for 'dimensionality reduction', ‘r’ for 'regression' and accordingly. I would pass the input data into the pipeline. Other options included imputation method, by mean or by median. Also, if the user does not provide the options, then he is asked to input the options separately. </p>
+
+<p>It is possible to adapt Machine Learning with command line, because output of one stage serves as the input of the next. There are no changes required to be performed on the output.  Also, the main steps in any machine learning problem are pretty much the same. Now, with minimum configuration changes, it will be possible to run almost any problem. The performance of this process is as good as the data that is being provided to it. If data is clean and devoid of NaN values, then prediction quality will be better. </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pipeline-for-ml maintained by <a href="https://github.com/sidgan">sidgan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
