@@ -1,5 +1,5 @@
 #!usr/bin/env python 
-
+#author sidgan
 
 from sklearn.kernel_approximation import RBFSampler
 import sklearn.cluster 
